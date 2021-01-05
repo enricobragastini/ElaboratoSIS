@@ -7,5 +7,3 @@
 - Bragastini Enrico
 
 - Maffini Andrea
-
-- 
