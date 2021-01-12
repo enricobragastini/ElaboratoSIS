@@ -1,0 +1,34 @@
+.model esercizio2
+.inputs i0 i1
+.outputs out
+
+.start_kiss
+.i 2
+.o 1
+.p 20
+.s 5
+.r A
+
+#tabella degli start_kiss
+#i0 i1 stato_presente stato_futuro out
+00 A B 0
+01 A A 0
+10 A A 0
+11 A A 0
+00 B B 0
+01 B A 0
+10 B A 0
+11 B C 0
+00 C D 0
+01 C A 0
+10 C A 0
+11 C A 0
+00 D B 0
+01 D E 1
+10 D A 0
+11 D C 0
+00 E B 0
+01 E A 0
+10 E A 0
+11 E A 0
+.end_kiss

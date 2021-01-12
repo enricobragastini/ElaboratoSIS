@@ -1,0 +1,12 @@
+#som_reg
+
+.model som_reg
+.inputs i1 i0 j1 j0 
+.outputs k1 k0
+.subckt registro_2bit j1=O1
+.subckt registro_2bit j0=O0
+.search registro_2bit.blif
+.subckt sommatore i1=s1
+.subckt sommatore i0=s0
+.search sommatore.blif 
+.end
