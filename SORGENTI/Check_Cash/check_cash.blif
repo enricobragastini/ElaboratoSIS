@@ -1,4 +1,4 @@
-.model DATAPATH
+.model CHECKCASH
 
 # INPUTS
 # CD = Cash Disponibile  16bit
@@ -47,7 +47,7 @@
 .names CashOk CR0 CDE0
 11 1
 
-.search shifter2.blif
-.search minoreuguale_16.blif
+.search Check_Cash/shifter2.blif
+.search Check_Cash/minoreuguale_16.blif
 
 .end

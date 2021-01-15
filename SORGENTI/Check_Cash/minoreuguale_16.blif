@@ -8,6 +8,6 @@
 .names Z AleB
 0 1
 
-.search maggiore_16.blif
+.search Check_Cash/maggiore_16.blif
 
 .end

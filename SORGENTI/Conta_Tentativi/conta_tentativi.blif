@@ -15,5 +15,5 @@
 .names R1 R0 Fine
 10 1
 
-.search sommatore.blif
-.search registro_2bit.blif
+.search Conta_Tentativi/sommatore.blif
+.search Conta_Tentativi/registro_2bit.blif
