@@ -1,5 +1,14 @@
 .model DATAPATH
 
+# INPUTS
+# CD = Cash Disponibile  16bit
+# CR = Cash Richiesto    10bit
+# Check Disponibilità     1bit
+
+# OUTPUTS
+# CashOK                  1bit
+# CDE Cash Da Erogare    10bit
+
 .inputs CD15 CD14 CD13 CD12 CD11 CD10 CD9 CD8 CD7 CD6 CD5 CD4 CD3 CD2 CD1 CD0 CR9 CR8 CR7 CR6 CR5 CR4 CR3 CR2 CR1 CR0 CheckDisp
 .outputs CashOk CDE9 CDE8 CDE7 CDE6 CDE5 CDE4 CDE3 CDE2 CDE1 CDE0
 
@@ -8,7 +17,7 @@
 
 
 # Verifico se CashRichiesto è minore o uguale di CashDisponibile/4
-#CashRichiestoValid diventa 1 se la condizione è rispettata
+# CashRichiestoValid diventa 1 se la condizione è rispettata
 .subckt MINOREUGUALE16 a15=CR15 a14=CR14 a13=CR13 a12=CR12 a11=CR11 a10=CR10 a9=CR9 a8=CR8 a7=CR7 a6=CR6 a5=CR5 a4=CR4 a3=CR3 a2=CR2 a1=CR1 a0=CR0 b15=O15 b14=O14 b13=O13 b12=O12 b11=O11 b10=O10 b9=O9 b8=O8 b7=O7 b6=O6 b5=O5 b4=O4 b3=O3 b2=O2 b1=O1 b0=O0 AleB=CashRichiestoValid
 
 

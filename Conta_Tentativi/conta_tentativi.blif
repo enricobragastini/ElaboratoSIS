@@ -1,0 +1,19 @@
+.model CONTATENTATIVI
+
+.inputs CheckFine
+.outputs Fine
+
+.names CheckFine S1
+1 0
+
+.names CheckFine S0
+1 1
+
+.subckt REGISTRO2 A1=a1 A0=a0 O1=R1 O0=R0
+.subckt SOMMATORE s1=S1 s0=S0 r1=R1 r0=R0 o1=a1 o0=a0
+
+.names R1 R0 Fine
+10 1
+
+.search sommatore.blif
+.search registro_2bit.blif
