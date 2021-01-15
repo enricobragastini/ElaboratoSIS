@@ -1,0 +1,13 @@
+.model MINOREUGUALE16
+
+.inputs a15 a14 a13 a12 a11 a10 a9 a8 a7 a6 a5 a4 a3 a2 a1 a0 b15 b14 b13 b12 b11 b10 b9 b8 b7 b6 b5 b4 b3 b2 b1 b0
+.outputs AleB
+
+.subckt MAGGIORE16 a15=a15 a14=a14 a13=a13 a12=a12 a11=a11 a10=a10 a9=a9 a8=a8 a7=a7 a6=a6 a5=a5 a4=a4 a3=a3 a2=a2 a1=a1 a0=a0 b15=b15 b14=b14 b13=b13 b12=b12 b11=b11 b10=b10 b9=b9 b8=b8 b7=b7 b6=b6 b5=b5 b4=b4 b3=b3 b2=b2 b1=b1 b0=b0 AgtB=Z
+
+.names Z AleB
+0 1
+
+.search maggiore_16.blif
+
+.end

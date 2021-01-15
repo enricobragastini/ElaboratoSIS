@@ -1,0 +1,44 @@
+.model DATAPATH
+
+.inputs CD15 CD14 CD13 CD12 CD11 CD10 CD9 CD8 CD7 CD6 CD5 CD4 CD3 CD2 CD1 CD0 CR9 CR8 CR7 CR6 CR5 CR4 CR3 CR2 CR1 CR0 CheckDisp
+.outputs CashOk CDE9 CDE8 CDE7 CDE6 CDE5 CDE4 CDE3 CDE2 CDE1 CDE0
+
+# Eseguo lo shift di due posizioni
+.subckt SHIFTER2 i15=CD15 i14=CD14 i13=CD13 i12=CD12 i11=CD11 i10=CD10 i9=CD9 i8=CD8 i7=CD7 i6=CD6 i5=CD5 i4=CD4 i3=CD3 i2=CD2 i1=CD1 i0=CD0 o15=O15 o14=O14 o13=O13 o12=O12 o11=O11 o10=O10 o9=O9 o8=O8 o7=O7 o6=O6 o5=O5 o4=O4 o3=O3 o2=O2 o1=O1 o0=O0 
+
+
+# Verifico se CashRichiesto è minore o uguale di CashDisponibile/4
+#CashRichiestoValid diventa 1 se la condizione è rispettata
+.subckt MINOREUGUALE16 a15=CR15 a14=CR14 a13=CR13 a12=CR12 a11=CR11 a10=CR10 a9=CR9 a8=CR8 a7=CR7 a6=CR6 a5=CR5 a4=CR4 a3=CR3 a2=CR2 a1=CR1 a0=CR0 b15=O15 b14=O14 b13=O13 b12=O12 b11=O11 b10=O10 b9=O9 b8=O8 b7=O7 b6=O6 b5=O5 b4=O4 b3=O3 b2=O2 b1=O1 b0=O0 AleB=CashRichiestoValid
+
+
+# Se CheckDisp=1 e CashRichiestoValid=1 abilito il CashOk
+.names CheckDisp CashRichiestoValid CashOk
+11 1
+
+# Se CashOk = 1 scrivo su CashDaErogare l'importo di CashRichiesto
+.names CashOk CR9 CDE9
+11 1
+.names CashOk CR8 CDE8
+11 1
+.names CashOk CR7 CDE7
+11 1
+.names CashOk CR6 CDE6
+11 1
+.names CashOk CR5 CDE5
+11 1
+.names CashOk CR4 CDE4
+11 1
+.names CashOk CR3 CDE3
+11 1
+.names CashOk CR2 CDE2
+11 1
+.names CashOk CR1 CDE1
+11 1
+.names CashOk CR0 CDE0
+11 1
+
+.search shifter2.blif
+.search minoreuguale_16.blif
+
+.end
