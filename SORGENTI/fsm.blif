@@ -1,5 +1,9 @@
-.model fsm
+.model FSM
+
+# bancomat c3 c2 c1 c0 CashOk Fine
 .inputs i0 i1 i2 i3 i4 i5 i6
+
+# AbilitaErog ReinserireCodice Blocco CheckDisp CheckFine
 .outputs o0 o1 o2 o3 o4
 
 .start_kiss
@@ -34,13 +38,13 @@
 1--1-00 C3 C_FINE     00001
 1-1--00 C3 C_FINE     00001
 11---00 C3 C_FINE     00001
-1000000 C3 C_CASH     00010
+1000000 C3 C_CASH     00000
 1----00 C2_ERR C3_ERR 00000
 1----00 C3_ERR C_FINE 00001
 1-----0 C_FINE C1     01000
 1-----1 C_FINE BLOCCO 00100
-1----0- C_CASH RIL_BM 00000
-1----1- C_CASH RIL_BM 10000
+1----0- C_CASH RIL_BM 00010
+1----1- C_CASH RIL_BM 10010
 1------ RIL_BM RIL_BM 00000
 0------ RIL_BM NO_BM  00000
 ------- BLOCCO NO_BM  00000
