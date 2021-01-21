@@ -15,15 +15,15 @@
 
 .inputs Bancomat_Inserito Codice3 Codice2 Codice1 Codice0 Cash_R9 Cash_R8 Cash_R7 Cash_R6 Cash_R5 Cash_R4 Cash_R3 Cash_R2 Cash_R1 Cash_R0 Cash_D15 Cash_D14 Cash_D13 Cash_D12 Cash_D11 Cash_D10 Cash_D9 Cash_D8 Cash_D7 Cash_D6 Cash_D5 Cash_D4 Cash_D3 Cash_D2 Cash_D1 Cash_D0
 
-.outputs Reinserire_Codice Abilitazione_Erogazione Blocco_Bancomat Cash_DE9 Cash_DE8 Cash_DE7 Cash_DE6 Cash_DE5 Cash_DE4 Cash_DE3 Cash_DE2 Cash_DE1 Cash_DE0 Check_Fine_Tentativi Fine_Tentativi
+.outputs Reinserire_Codice Abilitazione_Erogazione Blocco_Bancomat Cash_DE9 Cash_DE8 Cash_DE7 Cash_DE6 Cash_DE5 Cash_DE4 Cash_DE3 Cash_DE2 Cash_DE1 Cash_DE0
 
 
-# Unità di elaborazione
-.subckt DATAPATH CheckFine=Check_Fine_Tentativi CheckDisp=Check_Disponibilita CD15=Cash_D15 CD14=Cash_D14 CD13=Cash_D13 CD12=Cash_D12 CD11=Cash_D11 CD10=Cash_D10 CD9=Cash_D9 CD8=Cash_D8 CD7=Cash_D7 CD6=Cash_D6 CD5=Cash_D5 CD4=Cash_D4 CD3=Cash_D3 CD2=Cash_D2 CD1=Cash_D1 CD0=Cash_D0 CR9=Cash_R9 CR8=Cash_R8 CR7=Cash_R7 CR6=Cash_R6 CR5=Cash_R5 CR4=Cash_R4 CR3=Cash_R3 CR2=Cash_R2 CR1=Cash_R1 CR0=Cash_R0 Fine=Fine_Tentativi CashOk=Cash_Ok CDE9=Cash_DE9 CDE8=Cash_DE8 CDE7=Cash_DE7 CDE6=Cash_DE6 CDE5=Cash_DE5 CDE4=Cash_DE4 CDE3=Cash_DE3 CDE2=Cash_DE2 CDE1=Cash_DE1 CDE0=Cash_DE0
+# Unità di Elaborazione
+.subckt DATAPATH CheckFine=Check_Fine_Tentativi Reset=ResetCnt CheckDisp=Check_Disponibilita CD15=Cash_D15 CD14=Cash_D14 CD13=Cash_D13 CD12=Cash_D12 CD11=Cash_D11 CD10=Cash_D10 CD9=Cash_D9 CD8=Cash_D8 CD7=Cash_D7 CD6=Cash_D6 CD5=Cash_D5 CD4=Cash_D4 CD3=Cash_D3 CD2=Cash_D2 CD1=Cash_D1 CD0=Cash_D0 CR9=Cash_R9 CR8=Cash_R8 CR7=Cash_R7 CR6=Cash_R6 CR5=Cash_R5 CR4=Cash_R4 CR3=Cash_R3 CR2=Cash_R2 CR1=Cash_R1 CR0=Cash_R0 Fine=Fine_Tentativi CashOk=Cash_Ok CDE9=Cash_DE9 CDE8=Cash_DE8 CDE7=Cash_DE7 CDE6=Cash_DE6 CDE5=Cash_DE5 CDE4=Cash_DE4 CDE3=Cash_DE3 CDE2=Cash_DE2 CDE1=Cash_DE1 CDE0=Cash_DE0
 
 
 # Unità di Controllo
-.subckt FSM i0=Bancomat_Inserito i1=Codice3 i2=Codice2 i3=Codice1 i4=Codice0 i5=Cash_Ok i6=Fine_Tentativi o0=Abilitazione_Erogazione o1=Reinserire_Codice o2=Blocco_Bancomat o3=Check_Disponibilita o4=Check_Fine_Tentativi
+.subckt FSM i0=Bancomat_Inserito i1=Codice3 i2=Codice2 i3=Codice1 i4=Codice0 i5=Cash_Ok i6=Fine_Tentativi o0=Abilitazione_Erogazione o1=Reinserire_Codice o2=Blocco_Bancomat o3=Check_Disponibilita o4=Check_Fine_Tentativi o5=ResetCnt
 
 
 .search controllore.blif
