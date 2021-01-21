@@ -1,0 +1,62 @@
+.model FSM
+
+# bancomat c3 c2 c1 c0 CashOk Fine
+.inputs i0 i1 i2 i3 i4 i5 i6
+
+# AbilitaErog ReinserireCodice Blocco CheckDisp CheckFine ResetCnt
+.outputs o0 o1 o2 o3 o4 o5
+
+.start_kiss
+.i 7
+.o 6
+.p 34
+.s 10
+.r NO_BM
+
+# bancomat c3 c2 c1 c0 CashOk Fine stato_attuale stato_prossimo AbilitaErog ReinserireCodice Blocco CheckDisp CheckFine ResetCnt
+0------ NO_BM NO_BM         000001
+1------ NO_BM C1            000000
+
+1000000 C1 C2_ERR           000010
+1000100 C1 C2_ERR           000010
+1001000 C1 C2_ERR           000010
+1001100 C1 C2_ERR           000010
+1010000 C1 C2_ERR           000010
+1011000 C1 C2_ERR           000010
+1011100 C1 C2_ERR           000010
+11---00 C1 C2_ERR           000010
+
+1010100 C1 C2               000010
+
+1000000 C2 C3_ERR           000000
+1000100 C2 C3_ERR           000000
+1001000 C2 C3_ERR           000000
+1001100 C2 C3_ERR           000000
+1010000 C2 C3_ERR           000000
+1011000 C2 C3_ERR           000000
+1011100 C2 C3_ERR           000000
+11---00 C2 C3_ERR           000000
+1010100 C2 C3               000000
+
+1---100 C3 C1               010000
+1--1-00 C3 C1               010000
+1-1--00 C3 C1               010000
+11---00 C3 C1               010000
+
+1---101 C3 BLOCCO           001000
+1--1-01 C3 BLOCCO           001000
+1-1--01 C3 BLOCCO           001000
+11---01 C3 BLOCCO           001000
+
+1000000 C3 CODICE_OK        000000
+1----00 C2_ERR C3_ERR       000000
+
+1-----0 C3_ERR C1           010000
+1-----1 C3_ERR BLOCCO       001000
+
+1----0- CODICE_OK RIL_BM    000100
+1----1- CODICE_OK RIL_BM    100100
+1------ RIL_BM RIL_BM       000000
+0------ RIL_BM NO_BM        000001
+------- BLOCCO NO_BM        000001
+.end_kiss

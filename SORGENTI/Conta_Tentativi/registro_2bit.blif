@@ -5,6 +5,6 @@
 .subckt registro A=A1 O=O1
 .subckt registro A=A0 O=O0
 
-.search registro.blif
+.search Conta_Tentativi/registro.blif
 
 .end
