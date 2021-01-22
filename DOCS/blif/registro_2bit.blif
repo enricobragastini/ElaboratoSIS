@@ -1,7 +1,0 @@
-.model registro_2bit
-.inputs A1 A0
-.outputs O1 O0
-.subckt registro A=A1 O=O1
-.subckt registro A=A0 O=O0
-.search registro.blif
-.end
