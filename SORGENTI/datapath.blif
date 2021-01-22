@@ -1,11 +1,13 @@
 .model DATAPATH
 
-.inputs CheckFine Reset CheckDisp CD15 CD14 CD13 CD12 CD11 CD10 CD9 CD8 CD7 CD6 CD5 CD4 CD3 CD2 CD1 CD0 CR9 CR8 CR7 CR6 CR5 CR4 CR3 CR2 CR1 CR0
-.outputs Fine CashOk CDE9 CDE8 CDE7 CDE6 CDE5 CDE4 CDE3 CDE2 CDE1 CDE0
+.inputs Check_Fine_Tentativi Reset Check_Disponibilita Cash_D15 Cash_D14 Cash_D13 Cash_D12 Cash_D11 Cash_D10 Cash_D9 Cash_D8 Cash_D7 Cash_D6 Cash_D5 Cash_D4 Cash_D3 Cash_D2 Cash_D1 Cash_D0 Cash_R9 Cash_R8 Cash_R7 Cash_R6 Cash_R5 Cash_R4 Cash_R3 Cash_R2 Cash_R1 Cash_R0
+.outputs Fine_Tentativi Cash_Ok Cash_DE9 Cash_DE8 Cash_DE7 Cash_DE6 Cash_DE5 Cash_DE4 Cash_DE3 Cash_DE2 Cash_DE1 Cash_DE0
 
-.subckt CHECKCASH CD15=CD15 CD14=CD14 CD13=CD13 CD12=CD12 CD11=CD11 CD10=CD10 CD9=CD9 CD8=CD8 CD7=CD7 CD6=CD6 CD5=CD5 CD4=CD4 CD3=CD3 CD2=CD2 CD1=CD1 CD0=CD0 CR9=CR9 CR8=CR8 CR7=CR7 CR6=CR6 CR5=CR5 CR4=CR4 CR3=CR3 CR2=CR2 CR1=CR1 CR0=CR0 CheckDisp=CheckDisp CDE9=CDE9 CDE8=CDE8 CDE7=CDE7 CDE6=CDE6 CDE5=CDE5 CDE4=CDE4 CDE3=CDE3 CDE2=CDE2 CDE1=CDE1 CDE0=CDE0 CashOk=CashOk
 
-.subckt CONTATENTATIVI CheckFine=CheckFine Reset=Reset Fine=Fine
+
+.subckt CHECKCASH Cash_D15=Cash_D15 Cash_D14=Cash_D14 Cash_D13=Cash_D13 Cash_D12=Cash_D12 Cash_D11=Cash_D11 Cash_D10=Cash_D10 Cash_D9=Cash_D9 Cash_D8=Cash_D8 Cash_D7=Cash_D7 Cash_D6=Cash_D6 Cash_D5=Cash_D5 Cash_D4=Cash_D4 Cash_D3=Cash_D3 Cash_D2=Cash_D2 Cash_D1=Cash_D1 Cash_D0=Cash_D0 Cash_R9=Cash_R9 Cash_R8=Cash_R8 Cash_R7=Cash_R7 Cash_R6=Cash_R6 Cash_R5=Cash_R5 Cash_R4=Cash_R4 Cash_R3=Cash_R3 Cash_R2=Cash_R2 Cash_R1=Cash_R1 Cash_R0=Cash_R0 Check_Disponibilita=Check_Disponibilita Cash_DE9=Cash_DE9 Cash_DE8=Cash_DE8 Cash_DE7=Cash_DE7 Cash_DE6=Cash_DE6 Cash_DE5=Cash_DE5 Cash_DE4=Cash_DE4 Cash_DE3=Cash_DE3 Cash_DE2=Cash_DE2 Cash_DE1=Cash_DE1 Cash_DE0=Cash_DE0 Cash_Ok=Cash_Ok
+
+.subckt CONTATENTATIVI Check_Fine_Tentativi=Check_Fine_Tentativi Reset=Reset Fine_Tentativi=Fine_Tentativi
 
 .search Check_Cash/check_cash.blif
 .search Conta_Tentativi/conta_tentativi.blif
