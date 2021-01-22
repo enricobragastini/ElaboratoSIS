@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!--Created by yFiles for HTML 2.3.0.4-->
-<graphml xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://www.yworks.com/xml/schema/graphml.html/2.0/ygraphml.xsd " xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:demostyle="http://www.yworks.com/yFilesHTML/demos/FlatDemoStyle/1.0" xmlns:icon-style="http://www.yworks.com/yed-live/icon-style/1.0" xmlns:bpmn="http://www.yworks.com/xml/yfiles-bpmn/2.0" xmlns:demotablestyle="http://www.yworks.com/yFilesHTML/demos/FlatDemoTableStyle/1.0" xmlns:uml="http://www.yworks.com/yFilesHTML/demos/UMLDemoStyle/1.0" xmlns:GraphvizNodeStyle="http://www.yworks.com/yFilesHTML/graphviz-node-style/1.0" xmlns:VuejsNodeStyle="http://www.yworks.com/demos/yfiles-vuejs-node-style/1.0" xmlns:explorer-style="http://www.yworks.com/data-explorer/1.0" xmlns:y="http://www.yworks.com/xml/yfiles-common/3.0" xmlns:x="http://www.yworks.com/xml/yfiles-common/markup/3.0" xmlns:yjs="http://www.yworks.com/xml/yfiles-for-html/2.0/xaml" xmlns:sys="http://www.yworks.com/xml/yfiles-common/markup/primitives/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<graphml xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://www.yworks.com/xml/schema/graphml.html/2.0/ygraphml.xsd " xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:demostyle="http://www.yworks.com/yFilesHTML/demos/FlatDemoStyle/1.0" xmlns:icon-style="http://www.yworks.com/yed-live/icon-style/1.0" xmlns:bpmn="http://www.yworks.com/xml/yfiles-bpmn/2.0" xmlns:demotablestyle="http://www.yworks.com/yFilesHTML/demos/FlatDemoTableStyle/1.0" xmlns:uml="http://www.yworks.com/yFilesHTML/demos/UMLDemoStyle/1.0" xmlns:GraphvizNodeStyle="http://www.yworks.com/yFilesHTML/graphviz-node-style/1.0" xmlns:VuejsNodeStyle="http://www.yworks.com/demos/yfiles-vuejs-node-style/1.0" xmlns:explorer-style="http://www.yworks.com/data-explorer/1.0" xmlns:y="http://www.yworks.com/xml/yfiles-common/3.0" xmlns:x="http://www.yworks.com/xml/yfiles-common/markup/3.0" xmlns:yjs="http://www.yworks.com/xml/yfiles-for-html/2.0/xaml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<key id="d0" for="node" attr.type="int" attr.name="zOrder" y:attr.uri="http://www.yworks.com/xml/yfiles-z-order/1.0/zOrder"/>
 	<key id="d1" for="node" attr.type="boolean" attr.name="Expanded" y:attr.uri="http://www.yworks.com/xml/yfiles-common/2.0/folding/Expanded">
 		<default>true</default>
@@ -82,11 +82,7 @@
 			<data key="d7">
 				<yjs:ShapeNodeStyle shape="ELLIPSE">
 					<yjs:ShapeNodeStyle.stroke>
-						<yjs:Stroke fill="#FF000000">
-							<yjs:Stroke.thickness>
-								<sys:Double>5</sys:Double>
-							</yjs:Stroke.thickness>
-						</yjs:Stroke>
+						<yjs:Stroke fill="#FF000000" thickness="5"/>
 					</yjs:ShapeNodeStyle.stroke>
 				</yjs:ShapeNodeStyle>
 			</data>
@@ -113,7 +109,7 @@
 			<data key="d4">
 				<x:List>
 					<y:Label>
-						<y:Label.Text><![CDATA[PRIMA CIFRA]]></y:Label.Text>
+						<y:Label.Text>CIFRA_1</y:Label.Text>
 						<y:Label.LayoutParameter>
 							<y:CompositeLabelModelParameter Model="{y:GraphMLReference 2}">
 								<y:CompositeLabelModelParameter.Parameter>
@@ -137,11 +133,7 @@
 			<data key="d7">
 				<yjs:ShapeNodeStyle shape="ELLIPSE">
 					<yjs:ShapeNodeStyle.stroke>
-						<yjs:Stroke fill="#FF000000">
-							<yjs:Stroke.thickness>
-								<sys:Double>5</sys:Double>
-							</yjs:Stroke.thickness>
-						</yjs:Stroke>
+						<yjs:Stroke fill="#FF000000" thickness="5"/>
 					</yjs:ShapeNodeStyle.stroke>
 				</yjs:ShapeNodeStyle>
 			</data>
@@ -172,7 +164,7 @@
 			<data key="d4">
 				<x:List>
 					<y:Label>
-						<y:Label.Text><![CDATA[SECONDA CIFRA]]></y:Label.Text>
+						<y:Label.Text>CIFRA_2</y:Label.Text>
 						<y:Label.LayoutParameter>
 							<y:CompositeLabelModelParameter Model="{y:GraphMLReference 2}">
 								<y:CompositeLabelModelParameter.Parameter>
@@ -196,11 +188,7 @@
 			<data key="d7">
 				<yjs:ShapeNodeStyle shape="ELLIPSE">
 					<yjs:ShapeNodeStyle.stroke>
-						<yjs:Stroke fill="#FF000000">
-							<yjs:Stroke.thickness>
-								<sys:Double>5</sys:Double>
-							</yjs:Stroke.thickness>
-						</yjs:Stroke>
+						<yjs:Stroke fill="#FF000000" thickness="5"/>
 					</yjs:ShapeNodeStyle.stroke>
 				</yjs:ShapeNodeStyle>
 			</data>
@@ -225,7 +213,7 @@
 			<data key="d4">
 				<x:List>
 					<y:Label>
-						<y:Label.Text><![CDATA[TERZA CIFRA]]></y:Label.Text>
+						<y:Label.Text>CIFRA_3</y:Label.Text>
 						<y:Label.LayoutParameter>
 							<y:CompositeLabelModelParameter Model="{y:GraphMLReference 2}">
 								<y:CompositeLabelModelParameter.Parameter>
@@ -249,11 +237,7 @@
 			<data key="d7">
 				<yjs:ShapeNodeStyle shape="ELLIPSE">
 					<yjs:ShapeNodeStyle.stroke>
-						<yjs:Stroke fill="#FF000000">
-							<yjs:Stroke.thickness>
-								<sys:Double>5</sys:Double>
-							</yjs:Stroke.thickness>
-						</yjs:Stroke>
+						<yjs:Stroke fill="#FF000000" thickness="5"/>
 					</yjs:ShapeNodeStyle.stroke>
 				</yjs:ShapeNodeStyle>
 			</data>
@@ -303,11 +287,7 @@
 			<data key="d7">
 				<yjs:ShapeNodeStyle shape="ELLIPSE">
 					<yjs:ShapeNodeStyle.stroke>
-						<yjs:Stroke fill="#FF000000">
-							<yjs:Stroke.thickness>
-								<sys:Double>5</sys:Double>
-							</yjs:Stroke.thickness>
-						</yjs:Stroke>
+						<yjs:Stroke fill="#FF000000" thickness="5"/>
 					</yjs:ShapeNodeStyle.stroke>
 				</yjs:ShapeNodeStyle>
 			</data>
@@ -328,7 +308,7 @@
 			<data key="d4">
 				<x:List>
 					<y:Label>
-						<y:Label.Text><![CDATA[CIFRA 2 ERRORE]]></y:Label.Text>
+						<y:Label.Text>CIFRA_2_ERRORE</y:Label.Text>
 						<y:Label.LayoutParameter>
 							<y:CompositeLabelModelParameter Model="{y:GraphMLReference 2}">
 								<y:CompositeLabelModelParameter.Parameter>
@@ -352,11 +332,7 @@
 			<data key="d7">
 				<yjs:ShapeNodeStyle shape="ELLIPSE">
 					<yjs:ShapeNodeStyle.stroke>
-						<yjs:Stroke fill="#FF000000">
-							<yjs:Stroke.thickness>
-								<sys:Double>5</sys:Double>
-							</yjs:Stroke.thickness>
-						</yjs:Stroke>
+						<yjs:Stroke fill="#FF000000" thickness="5"/>
 					</yjs:ShapeNodeStyle.stroke>
 				</yjs:ShapeNodeStyle>
 			</data>
@@ -376,7 +352,7 @@
 			<data key="d4">
 				<x:List>
 					<y:Label>
-						<y:Label.Text><![CDATA[CIFRA 3 ERRORE]]></y:Label.Text>
+						<y:Label.Text>CIFRA_3_ERRORE</y:Label.Text>
 						<y:Label.LayoutParameter>
 							<y:CompositeLabelModelParameter Model="{y:GraphMLReference 2}">
 								<y:CompositeLabelModelParameter.Parameter>
@@ -400,11 +376,7 @@
 			<data key="d7">
 				<yjs:ShapeNodeStyle shape="ELLIPSE">
 					<yjs:ShapeNodeStyle.stroke>
-						<yjs:Stroke fill="#FF000000">
-							<yjs:Stroke.thickness>
-								<sys:Double>5</sys:Double>
-							</yjs:Stroke.thickness>
-						</yjs:Stroke>
+						<yjs:Stroke fill="#FF000000" thickness="5"/>
 					</yjs:ShapeNodeStyle.stroke>
 				</yjs:ShapeNodeStyle>
 			</data>
@@ -454,11 +426,7 @@
 			<data key="d7">
 				<yjs:ShapeNodeStyle shape="ELLIPSE">
 					<yjs:ShapeNodeStyle.stroke>
-						<yjs:Stroke fill="#FF000000">
-							<yjs:Stroke.thickness>
-								<sys:Double>5</sys:Double>
-							</yjs:Stroke.thickness>
-						</yjs:Stroke>
+						<yjs:Stroke fill="#FF000000" thickness="5"/>
 					</yjs:ShapeNodeStyle.stroke>
 				</yjs:ShapeNodeStyle>
 			</data>
@@ -508,11 +476,7 @@ BANCOMAT]]></y:Label.Text>
 			<data key="d7">
 				<yjs:ShapeNodeStyle shape="ELLIPSE">
 					<yjs:ShapeNodeStyle.stroke>
-						<yjs:Stroke fill="#FF000000">
-							<yjs:Stroke.thickness>
-								<sys:Double>5</sys:Double>
-							</yjs:Stroke.thickness>
-						</yjs:Stroke>
+						<yjs:Stroke fill="#FF000000" thickness="5"/>
 					</yjs:ShapeNodeStyle.stroke>
 				</yjs:ShapeNodeStyle>
 			</data>
@@ -561,16 +525,16 @@ BANCOMAT]]></y:Label.Text>
 			<data key="d11">
 				<x:List>
 					<y:Label Style="{y:GraphMLReference 4}">
-						<y:Label.Text>01010-/000010</y:Label.Text>
+						<y:Label.Text>101010-/000010</y:Label.Text>
 						<y:Label.LayoutParameter>
 							<y:SmartEdgeLabelModelParameter Model="{y:GraphMLReference 3}" SegmentRatio="0" Distance="-33.74899999999977"/>
 						</y:Label.LayoutParameter>
 					</y:Label>
 					<y:Label>
-						<y:Label.Text><![CDATA[0---000/000010
-0-0--00/000010
-0--1-00/000010
-01---00/000010]]></y:Label.Text>
+						<y:Label.Text><![CDATA[10---000/000010
+10-0--00/000010
+10--1-00/000010
+101---00/000010]]></y:Label.Text>
 						<y:Label.LayoutParameter>
 							<y:SmartEdgeLabelModelParameter Model="{y:GraphMLReference 3}" SegmentRatio="0.08086560364464693" Distance="139.49899999999977"/>
 						</y:Label.LayoutParameter>
@@ -628,10 +592,10 @@ BANCOMAT]]></y:Label.Text>
 						</y:Label.Style>
 					</y:Label>
 					<y:Label>
-						<y:Label.Text><![CDATA[0---000/000000
-0-0--00/000000
-0--1-00/000000
-01---00/000000]]></y:Label.Text>
+						<y:Label.Text><![CDATA[10---000/000000
+10-0--00/000000
+10--1-00/000000
+101---00/000000]]></y:Label.Text>
 						<y:Label.LayoutParameter>
 							<y:SmartEdgeLabelModelParameter Model="{y:GraphMLReference 3}" Location="FromTarget" SegmentRatio="-287.74999999999994" Distance="295.4989999999991"/>
 						</y:Label.LayoutParameter>
