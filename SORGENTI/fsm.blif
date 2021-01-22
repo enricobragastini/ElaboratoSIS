@@ -25,6 +25,7 @@
 1--1-00     CIFRA_2             CIFRA_3_ERRORE      000000
 1-0--00     CIFRA_2             CIFRA_3_ERRORE      000000
 11---00     CIFRA_2             CIFRA_3_ERRORE      000000
+
 101010-     CIFRA_2             CIFRA_3             000000
 
 1---100     CIFRA_3             CIFRA_1             100000
@@ -46,6 +47,7 @@
 1----0-     CODICE_OK           RILASCIA_BANCOMAT   000100
 1----1-     CODICE_OK           RILASCIA_BANCOMAT   010100
 1------     RILASCIA_BANCOMAT   RILASCIA_BANCOMAT   000000
+
 0------     RILASCIA_BANCOMAT   NO_BANCOMAT         000001
 -------     BLOCCO              NO_BANCOMAT         000001
 .end_kiss
