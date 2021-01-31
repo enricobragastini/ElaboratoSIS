@@ -3,10 +3,10 @@
 Fine_Tentativi
 .outputs Reinserire_Codice Abilitazione_Erogazione Blocco_Bancomat \
 Check_Disponibilita Check_Fine_Tentativi Reset
-.latch    [220] LatchOut_v7   0
-.latch    [221] LatchOut_v8   0
-.latch    Reset LatchOut_v9   1
-.latch    [223] LatchOut_v10   0
+.latch    [220] LatchOut_v7 re NIL 0
+.latch    [221] LatchOut_v8 re NIL 0
+.latch    Reset LatchOut_v9 re NIL 1
+.latch    [223] LatchOut_v10 re NIL 0
 .start_kiss
 .i 7
 .o 6
