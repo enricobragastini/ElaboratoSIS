@@ -1,0 +1,15 @@
+.model DATAPATH
+
+.inputs Check_Fine_Tentativi Reset Check_Disponibilita Cash_D15 Cash_D14 Cash_D13 Cash_D12 Cash_D11 Cash_D10 Cash_D9 Cash_D8 Cash_D7 Cash_D6 Cash_D5 Cash_D4 Cash_D3 Cash_D2 Cash_D1 Cash_D0 Cash_R9 Cash_R8 Cash_R7 Cash_R6 Cash_R5 Cash_R4 Cash_R3 Cash_R2 Cash_R1 Cash_R0
+.outputs Fine_Tentativi Cash_Ok Cash_DE9 Cash_DE8 Cash_DE7 Cash_DE6 Cash_DE5 Cash_DE4 Cash_DE3 Cash_DE2 Cash_DE1 Cash_DE0
+
+
+
+.subckt CHECKCASH Cash_D15=Cash_D15 Cash_D14=Cash_D14 Cash_D13=Cash_D13 Cash_D12=Cash_D12 Cash_D11=Cash_D11 Cash_D10=Cash_D10 Cash_D9=Cash_D9 Cash_D8=Cash_D8 Cash_D7=Cash_D7 Cash_D6=Cash_D6 Cash_D5=Cash_D5 Cash_D4=Cash_D4 Cash_D3=Cash_D3 Cash_D2=Cash_D2 Cash_D1=Cash_D1 Cash_D0=Cash_D0 Cash_R9=Cash_R9 Cash_R8=Cash_R8 Cash_R7=Cash_R7 Cash_R6=Cash_R6 Cash_R5=Cash_R5 Cash_R4=Cash_R4 Cash_R3=Cash_R3 Cash_R2=Cash_R2 Cash_R1=Cash_R1 Cash_R0=Cash_R0 Check_Disponibilita=Check_Disponibilita Cash_DE9=Cash_DE9 Cash_DE8=Cash_DE8 Cash_DE7=Cash_DE7 Cash_DE6=Cash_DE6 Cash_DE5=Cash_DE5 Cash_DE4=Cash_DE4 Cash_DE3=Cash_DE3 Cash_DE2=Cash_DE2 Cash_DE1=Cash_DE1 Cash_DE0=Cash_DE0 Cash_Ok=Cash_Ok
+
+.subckt CONTATENTATIVI Check_Fine_Tentativi=Check_Fine_Tentativi Reset=Reset Fine_Tentativi=Fine_Tentativi
+
+.search check_cash.blif
+.search conta_tentativi.blif
+
+.end

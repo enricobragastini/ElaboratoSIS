@@ -1,0 +1,27 @@
+.model CONTATENTATIVI
+
+.inputs Check_Fine_Tentativi Reset
+.outputs Fine_Tentativi
+.names Check_Fine_Tentativi S0
+1 1
+
+.names S1
+0
+
+.subckt SOMMATORE s1=S1 s0=S0 r1=R1 r0=R0 o1=a1 o0=a0
+
+.names Reset a1 A1
+01 1
+.names Reset a0 A0
+01 1
+
+.subckt REGISTRO2 A1=A1 A0=A0 O1=R1 O0=R0
+
+.names R1 R0 Fine_Tentativi
+11 1
+
+
+.search sommatore.blif
+.search registro_2bit.blif
+
+.end

@@ -1,0 +1,11 @@
+.model SOMMATORE
+.inputs s1 s0 r1 r0
+.outputs o1 o0
+.names s1 r1 r0 o0 o1
+-1-1 1
+010- 1
+0010 1
+.names s1 s0 r0 o0
+001 1
+010 1
+.end

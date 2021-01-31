@@ -1,0 +1,55 @@
+.model CHECKCASH
+
+# INPUTS
+# Cash_D = Cash Disponibile     16bit
+# Cash_R = Cash Richiesto       10bit
+# Check Disponibilità           1bit
+
+# OUTPUTS
+# CashOK                        1bit
+# Cash_DE Cash Da Erogare       10bit
+
+.inputs Cash_D15 Cash_D14 Cash_D13 Cash_D12 Cash_D11 Cash_D10 Cash_D9 Cash_D8 Cash_D7 Cash_D6 Cash_D5 Cash_D4 Cash_D3 Cash_D2 Cash_D1 Cash_D0 Cash_R9 Cash_R8 Cash_R7 Cash_R6 Cash_R5 Cash_R4 Cash_R3 Cash_R2 Cash_R1 Cash_R0 Check_Disponibilita
+.outputs Cash_Ok Cash_DE9 Cash_DE8 Cash_DE7 Cash_DE6 Cash_DE5 Cash_DE4 Cash_DE3 Cash_DE2 Cash_DE1 Cash_DE0
+
+# Eseguo lo shift di due posizioni
+.subckt SHIFTER2 i9=Cash_R9 i8=Cash_R8 i7=Cash_R7 i6=Cash_R6 i5=Cash_R5 i4=Cash_R4 i3=Cash_R3 i2=Cash_R2 i1=Cash_R1 i0=Cash_R0 o11=O11 o10=O10 o9=O9 o8=O8 o7=O7 o6=O6 o5=O5 o4=O4 o3=O3 o2=O2 o1=O1 o0=O0
+
+.names ZERO
+0
+
+# Verifico se CASH_DISPONIBILE > 4*CASH_RICHIESTO
+# CashRichiestoValid diventa 1 se la condizione è rispettata
+.subckt MAGGIORE16 a15=Cash_D15 a14=Cash_D14 a13=Cash_D13 a12=Cash_D12 a11=Cash_D11 a10=Cash_D10 a9=Cash_D9 a8=Cash_D8 a7=Cash_D7 a6=Cash_D6 a5=Cash_D5 a4=Cash_D4 a3=Cash_D3 a2=Cash_D2 a1=Cash_D1 a0=Cash_D0 b15=ZERO b14=ZERO b13=ZERO b12=ZERO b11=O11 b10=O10 b9=O9 b8=O8 b7=O7 b6=O6 b5=O5 b4=O4 b3=O3 b2=O2 b1=O1 b0=O0 AgtB=CashRichiestoValid
+
+
+# Se Check_Disponibilita=1 e CashRichiestoValid=1 abilito il Cash_Ok
+.names Check_Disponibilita CashRichiestoValid Cash_Ok
+11 1
+
+# Se Cash_Ok = 1 scrivo su CashDaErogare l'importo di CashRichiesto
+.names Cash_Ok Cash_R9 Cash_DE9
+11 1
+.names Cash_Ok Cash_R8 Cash_DE8
+11 1
+.names Cash_Ok Cash_R7 Cash_DE7
+11 1
+.names Cash_Ok Cash_R6 Cash_DE6
+11 1
+.names Cash_Ok Cash_R5 Cash_DE5
+11 1
+.names Cash_Ok Cash_R4 Cash_DE4
+11 1
+.names Cash_Ok Cash_R3 Cash_DE3
+11 1
+.names Cash_Ok Cash_R2 Cash_DE2
+11 1
+.names Cash_Ok Cash_R1 Cash_DE1
+11 1
+.names Cash_Ok Cash_R0 Cash_DE0
+11 1
+
+.search shifter2.blif
+.search maggiore_16.blif
+
+.end

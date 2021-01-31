@@ -1,0 +1,15 @@
+.model CONTATENTATIVI
+.inputs Check_Fine_Tentativi Reset
+.outputs Fine_Tentativi
+.latch    A1 R1 re NIL 0
+.latch    A0 R0 re NIL 0
+.names R1 R0 Fine_Tentativi
+11 1
+.names Check_Fine_Tentativi Reset R1 R0 A0 A1
+--1-1 1
+-010- 1
+1001- 1
+.names Check_Fine_Tentativi Reset R0 A0
+001 1
+100 1
+.end

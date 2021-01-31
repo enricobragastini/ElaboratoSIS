@@ -1,0 +1,36 @@
+FSMD prima ottimizzazione
+
+FSMD            pi=31   po=13   nodes= 60       latches= 6
+lits(sop)= 336
+
+
+FSMD dopo ottimizzazione
+
+FSMD            pi=31   po=13   nodes= 33       latches= 6
+lits(sop)= 228
+
+
+POST MAPPING
+>>> before removing serial inverters <<<
+# of outputs:          19
+total gate area:       2936.00
+maximum arrival time: (24.40,24.40)
+maximum po slack:     (-5.20,-5.20)
+minimum po slack:     (-24.40,-24.40)
+total neg slack:      (-336.40,-336.40)
+# of failing outputs:  19
+>>> before removing parallel inverters <<<
+# of outputs:          19
+total gate area:       2936.00
+maximum arrival time: (24.40,24.40)
+maximum po slack:     (-5.20,-5.20)
+minimum po slack:     (-24.40,-24.40)
+total neg slack:      (-336.40,-336.40)
+# of failing outputs:  19
+# of outputs:          19
+total gate area:       2936.00
+maximum arrival time: (24.40,24.40)
+maximum po slack:     (-5.20,-5.20)
+minimum po slack:     (-24.40,-24.40)
+total neg slack:      (-336.40,-336.40)
+# of failing outputs:  19

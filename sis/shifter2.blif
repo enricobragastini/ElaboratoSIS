@@ -1,0 +1,31 @@
+.model SHIFTER2
+
+.inputs i9 i8 i7 i6 i5 i4 i3 i2 i1 i0
+.outputs o11 o10 o9 o8 o7 o6 o5 o4 o3 o2 o1 o0
+
+.names o0
+0
+.names o1
+0
+.names i0 o2
+1 1
+.names i1 o3
+1 1
+.names i2 o4
+1 1
+.names i3 o5
+1 1
+.names i4 o6
+1 1
+.names i5 o7
+1 1
+.names i6 o8
+1 1
+.names i7 o9
+1 1
+.names i8 o10
+1 1
+.names i9 o11
+1 1
+
+.end

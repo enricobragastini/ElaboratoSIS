@@ -1,0 +1,290 @@
+.model FSM
+.inputs Bancomat_Inserito Codice3 Codice2 Codice1 Codice0 Cash_Ok \
+Fine_Tentativi
+.outputs Reinserire_Codice Abilitazione_Erogazione Blocco_Bancomat \
+Check_Disponibilita Check_Fine_Tentativi Reset
+.latch    [220] LatchOut_v7   0
+.latch    [221] LatchOut_v8   0
+.latch    Reset LatchOut_v9   1
+.latch    [223] LatchOut_v10   0
+.start_kiss
+.i 7
+.o 6
+.p 29
+.s 9
+.r NO_BANCOMAT
+0------ NO_BANCOMAT NO_BANCOMAT 000001
+1------ NO_BANCOMAT CIFRA_1 000000
+1---000 CIFRA_1 CIFRA_2_ERRORE 000010
+1--1-00 CIFRA_1 CIFRA_2_ERRORE 000010
+1-0--00 CIFRA_1 CIFRA_2_ERRORE 000010
+11---00 CIFRA_1 CIFRA_2_ERRORE 000010
+101010- CIFRA_1 CIFRA_2 000010
+1----00 CIFRA_2_ERRORE CIFRA_3_ERRORE 000000
+1---000 CIFRA_2 CIFRA_3_ERRORE 000000
+1--1-00 CIFRA_2 CIFRA_3_ERRORE 000000
+1-0--00 CIFRA_2 CIFRA_3_ERRORE 000000
+11---00 CIFRA_2 CIFRA_3_ERRORE 000000
+101010- CIFRA_2 CIFRA_3 000000
+1-----0 CIFRA_3_ERRORE CIFRA_1 100000
+1-----1 CIFRA_3_ERRORE BLOCCO 001000
+1---100 CIFRA_3 CIFRA_1 100000
+1--1-00 CIFRA_3 CIFRA_1 100000
+1-1--00 CIFRA_3 CIFRA_1 100000
+11---00 CIFRA_3 CIFRA_1 100000
+1---101 CIFRA_3 BLOCCO 001000
+1--1-01 CIFRA_3 BLOCCO 001000
+1-1--01 CIFRA_3 BLOCCO 001000
+11---01 CIFRA_3 BLOCCO 001000
+1000000 CIFRA_3 CODICE_OK 000000
+------- BLOCCO NO_BANCOMAT 000001
+1----0- CODICE_OK RILASCIA_BANCOMAT 000100
+1----1- CODICE_OK RILASCIA_BANCOMAT 010100
+1------ RILASCIA_BANCOMAT RILASCIA_BANCOMAT 000000
+0------ RILASCIA_BANCOMAT NO_BANCOMAT 000001
+.end_kiss
+.latch_order LatchOut_v7 LatchOut_v8 LatchOut_v9 LatchOut_v10
+.code NO_BANCOMAT 0010
+.code CIFRA_1 0000
+.code CIFRA_2_ERRORE 0101
+.code CIFRA_2 1101
+.code CIFRA_3_ERRORE 0001
+.code CIFRA_3 1001
+.code BLOCCO 0100
+.code CODICE_OK 1100
+.code RILASCIA_BANCOMAT 1000
+.names Codice2 Codice0 LatchOut_v7 LatchOut_v8 LatchOut_v10 [223] \
+Check_Fine_Tentativi Reset [260] [261] [263] [220]
+--1-0--0--- 1
+----10----0 1
+11----1-0-- 1
+11-1-----0- 1
+.names LatchOut_v10 [223] Reinserire_Codice Check_Fine_Tentativi [221]
+---1 1
+100- 1
+.names LatchOut_v8 LatchOut_v10 Check_Fine_Tentativi [223]
+--1 1
+11- 1
+.names Fine_Tentativi LatchOut_v8 LatchOut_v10 [263] Reinserire_Codice
+0011 1
+.names Cash_Ok LatchOut_v7 LatchOut_v8 Abilitazione_Erogazione
+111 1
+.names Fine_Tentativi LatchOut_v8 LatchOut_v10 Blocco_Bancomat
+101 1
+.names LatchOut_v7 LatchOut_v8 LatchOut_v10 Check_Disponibilita
+110 1
+.names LatchOut_v7 LatchOut_v8 LatchOut_v9 LatchOut_v10 Check_Fine_Tentativi
+0000 1
+.names Bancomat_Inserito LatchOut_v7 LatchOut_v8 LatchOut_v10 Reset
+0--- 1
+-010 1
+.names Codice3 Codice1 [260]
+1- 1
+-1 1
+.names LatchOut_v7 [260] [261]
+0- 1
+-1 1
+.names Codice2 Codice0 [261] [263]
+1-- 1
+-1- 1
+--1 1
+.exdc 
+.inputs Bancomat_Inserito Codice3 Codice2 Codice1 Codice0 Cash_Ok \
+Fine_Tentativi LatchOut_v7 LatchOut_v8 LatchOut_v9 LatchOut_v10
+.outputs [220] [221] [223] Reinserire_Codice Abilitazione_Erogazione \
+Blocco_Bancomat Check_Disponibilita Check_Fine_Tentativi Reset
+.names Bancomat_Inserito Codice3 Codice2 Codice1 Codice0 Cash_Ok \
+Fine_Tentativi LatchOut_v7 LatchOut_v8 LatchOut_v9 LatchOut_v10 [220]
+-------1-1- 1
+--------11- 1
+0---------1 1
+---------11 1
+0------11-- 1
+-----1-1--1 1
+-----1--1-1 1
+0------000- 1
+-1----1-1-1 1
+--0---1-1-1 1
+---1--1-1-1 1
+----0-1-1-1 1
+------101-1 1
+-----1-0000 1
+-1----10000 1
+--0---10000 1
+---1--10000 1
+----0-10000 1
+-0000-11--1 1
+.names Bancomat_Inserito Codice3 Codice2 Codice1 Codice0 Cash_Ok \
+Fine_Tentativi LatchOut_v7 LatchOut_v8 LatchOut_v9 LatchOut_v10 [221]
+-------1-1- 1
+--------11- 1
+0---------1 1
+---------11 1
+0------11-- 1
+-----1-1--1 1
+-----1--1-1 1
+0------000- 1
+-1----1-1-1 1
+--0---1-1-1 1
+---1--1-1-1 1
+----0-1-1-1 1
+------101-1 1
+-----1-0000 1
+-1----10000 1
+--0---10000 1
+---1--10000 1
+----0-10000 1
+-0000-11--1 1
+.names Bancomat_Inserito Codice3 Codice2 Codice1 Codice0 Cash_Ok \
+Fine_Tentativi LatchOut_v7 LatchOut_v8 LatchOut_v9 LatchOut_v10 [223]
+-------1-1- 1
+--------11- 1
+0---------1 1
+---------11 1
+0------11-- 1
+-----1-1--1 1
+-----1--1-1 1
+0------000- 1
+-1----1-1-1 1
+--0---1-1-1 1
+---1--1-1-1 1
+----0-1-1-1 1
+------101-1 1
+-----1-0000 1
+-1----10000 1
+--0---10000 1
+---1--10000 1
+----0-10000 1
+-0000-11--1 1
+.names Bancomat_Inserito Codice3 Codice2 Codice1 Codice0 Cash_Ok \
+Fine_Tentativi LatchOut_v7 LatchOut_v8 LatchOut_v9 LatchOut_v10 \
+Reinserire_Codice
+-------1-1- 1
+--------11- 1
+0---------1 1
+---------11 1
+0------11-- 1
+-----1-1--1 1
+-----1--1-1 1
+0------000- 1
+-1----1-1-1 1
+--0---1-1-1 1
+---1--1-1-1 1
+----0-1-1-1 1
+------101-1 1
+-----1-0000 1
+-1----10000 1
+--0---10000 1
+---1--10000 1
+----0-10000 1
+-0000-11--1 1
+.names Bancomat_Inserito Codice3 Codice2 Codice1 Codice0 Cash_Ok \
+Fine_Tentativi LatchOut_v7 LatchOut_v8 LatchOut_v9 LatchOut_v10 \
+Abilitazione_Erogazione
+-------1-1- 1
+--------11- 1
+0---------1 1
+---------11 1
+0------11-- 1
+-----1-1--1 1
+-----1--1-1 1
+0------000- 1
+-1----1-1-1 1
+--0---1-1-1 1
+---1--1-1-1 1
+----0-1-1-1 1
+------101-1 1
+-----1-0000 1
+-1----10000 1
+--0---10000 1
+---1--10000 1
+----0-10000 1
+-0000-11--1 1
+.names Bancomat_Inserito Codice3 Codice2 Codice1 Codice0 Cash_Ok \
+Fine_Tentativi LatchOut_v7 LatchOut_v8 LatchOut_v9 LatchOut_v10 \
+Blocco_Bancomat
+-------1-1- 1
+--------11- 1
+0---------1 1
+---------11 1
+0------11-- 1
+-----1-1--1 1
+-----1--1-1 1
+0------000- 1
+-1----1-1-1 1
+--0---1-1-1 1
+---1--1-1-1 1
+----0-1-1-1 1
+------101-1 1
+-----1-0000 1
+-1----10000 1
+--0---10000 1
+---1--10000 1
+----0-10000 1
+-0000-11--1 1
+.names Bancomat_Inserito Codice3 Codice2 Codice1 Codice0 Cash_Ok \
+Fine_Tentativi LatchOut_v7 LatchOut_v8 LatchOut_v9 LatchOut_v10 \
+Check_Disponibilita
+-------1-1- 1
+--------11- 1
+0---------1 1
+---------11 1
+0------11-- 1
+-----1-1--1 1
+-----1--1-1 1
+0------000- 1
+-1----1-1-1 1
+--0---1-1-1 1
+---1--1-1-1 1
+----0-1-1-1 1
+------101-1 1
+-----1-0000 1
+-1----10000 1
+--0---10000 1
+---1--10000 1
+----0-10000 1
+-0000-11--1 1
+.names Bancomat_Inserito Codice3 Codice2 Codice1 Codice0 Cash_Ok \
+Fine_Tentativi LatchOut_v7 LatchOut_v8 LatchOut_v9 LatchOut_v10 \
+Check_Fine_Tentativi
+-------1-1- 1
+--------11- 1
+0---------1 1
+---------11 1
+0------11-- 1
+-----1-1--1 1
+-----1--1-1 1
+0------000- 1
+-1----1-1-1 1
+--0---1-1-1 1
+---1--1-1-1 1
+----0-1-1-1 1
+------101-1 1
+-----1-0000 1
+-1----10000 1
+--0---10000 1
+---1--10000 1
+----0-10000 1
+-0000-11--1 1
+.names Bancomat_Inserito Codice3 Codice2 Codice1 Codice0 Cash_Ok \
+Fine_Tentativi LatchOut_v7 LatchOut_v8 LatchOut_v9 LatchOut_v10 Reset
+-------1-1- 1
+--------11- 1
+0---------1 1
+---------11 1
+0------11-- 1
+-----1-1--1 1
+-----1--1-1 1
+0------000- 1
+-1----1-1-1 1
+--0---1-1-1 1
+---1--1-1-1 1
+----0-1-1-1 1
+------101-1 1
+-----1-0000 1
+-1----10000 1
+--0---10000 1
+---1--10000 1
+----0-10000 1
+-0000-11--1 1
+.end

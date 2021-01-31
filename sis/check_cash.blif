@@ -1,0 +1,79 @@
+.model CHECKCASH
+.inputs Cash_D15 Cash_D14 Cash_D13 Cash_D12 Cash_D11 Cash_D10 Cash_D9 Cash_D8 \
+Cash_D7 Cash_D6 Cash_D5 Cash_D4 Cash_D3 Cash_D2 Cash_D1 Cash_D0 Cash_R9 \
+Cash_R8 Cash_R7 Cash_R6 Cash_R5 Cash_R4 Cash_R3 Cash_R2 Cash_R1 Cash_R0 \
+Check_Disponibilita
+.outputs Cash_Ok Cash_DE9 Cash_DE8 Cash_DE7 Cash_DE6 Cash_DE5 Cash_DE4 \
+Cash_DE3 Cash_DE2 Cash_DE1 Cash_DE0
+.names Cash_D15 Cash_D14 Cash_D13 Cash_D12 Cash_D11 Cash_D10 Cash_D9 \
+Check_Disponibilita x11 x10 x9 [168] Cash_Ok
+1------1---- 1
+-1-----1---- 1
+--1----1---- 1
+---1---1---- 1
+----1--11--- 1
+-----1-101-- 1
+------11001- 1
+-------10001 1
+.names Cash_Ok Cash_R9 Cash_DE9
+11 1
+.names Cash_Ok Cash_R8 Cash_DE8
+11 1
+.names Cash_Ok Cash_R7 Cash_DE7
+11 1
+.names Cash_Ok Cash_R6 Cash_DE6
+11 1
+.names Cash_Ok Cash_R5 Cash_DE5
+11 1
+.names Cash_Ok Cash_R4 Cash_DE4
+11 1
+.names Cash_Ok Cash_R3 Cash_DE3
+11 1
+.names Cash_Ok Cash_R2 Cash_DE2
+11 1
+.names Cash_Ok Cash_R1 Cash_DE1
+11 1
+.names Cash_Ok Cash_R0 Cash_DE0
+11 1
+.names Cash_D11 Cash_R9 x11
+01 1
+10 1
+.names Cash_D10 Cash_R8 x10
+01 1
+10 1
+.names Cash_D9 Cash_R7 x9
+01 1
+10 1
+.names Cash_D8 Cash_R6 x8
+01 1
+10 1
+.names Cash_D7 Cash_R5 x7
+01 1
+10 1
+.names Cash_D6 Cash_R4 x6
+01 1
+10 1
+.names Cash_D5 Cash_R3 x5
+01 1
+10 1
+.names Cash_D4 Cash_R2 x4
+01 1
+10 1
+.names Cash_D1 Cash_D0 [160]
+1- 1
+-1 1
+.names Cash_D8 Cash_D7 Cash_D6 Cash_D5 Cash_D4 Cash_D3 Cash_D2 Cash_R1 Cash_R0 \
+x8 x7 x6 x5 x4 [160] [168]
+1--------1----- 1
+-1-------01---- 1
+--1------001--- 1
+---1-----0001-- 1
+----1----00001- 1
+-----1-0-00000- 1
+-----11-000000- 1
+------10000000- 1
+-----11--000001 1
+------10-000001 1
+-----1--0000001 1
+-------00000001 1
+.end
