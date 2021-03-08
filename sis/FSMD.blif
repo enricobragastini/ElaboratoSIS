@@ -6,256 +6,120 @@ Cash_D5 Cash_D4 Cash_D3 Cash_D2 Cash_D1 Cash_D0
 .outputs Reinserire_Codice Abilitazione_Erogazione Blocco_Bancomat Cash_DE9 \
 Cash_DE8 Cash_DE7 Cash_DE6 Cash_DE5 Cash_DE4 Cash_DE3 Cash_DE2 Cash_DE1 \
 Cash_DE0
-.default_input_arrival 0.00 0.00 
-.default_output_required 0.00 0.00 
-.default_input_drive 0.20 0.20 
-.default_output_load 1.00 
-.default_max_input_load 999.00 
-.latch    [7255] LatchOut_v7 re NIL 0
-.latch    [7254] LatchOut_v8 re NIL 0
-.latch    [7256] LatchOut_v9 re NIL 1
-.latch    [7257] LatchOut_v10 re NIL 0
-.latch    [7253] R1 re NIL 0
-.latch    [7729] R0 re NIL 0
-.names Codice2 [7480]
-0 1
-.names Codice1 Codice3 [7480] [7473]
-000 1
-.names Codice0 [7483]
-0 1
-.names LatchOut_v7 LatchOut_v8 LatchOut_v9 LatchOut_v10 [7489]
-1--- 1
--1-- 1
---1- 1
----1 1
-.names [7483] [7489] [7468]
-00 1
-.names Codice3 Codice1 [7449]
-00 1
-.names LatchOut_v8 [7485]
-0 1
-.names LatchOut_v10 [7487]
-0 1
-.names [7489] [7485] [7487] [7973]
-0-- 1
--00 1
-.names Codice2 Codice0 [7973] [7487] [7247]
+.latch    [220] LatchOut_v7 re NIL 0
+.latch    [221] LatchOut_v8 re NIL 0
+.latch    Reset LatchOut_v9 re NIL 1
+.latch    [223] LatchOut_v10 re NIL 0
+.latch    A1 R1 re NIL 0
+.latch    A0 R0 re NIL 0
+.names Blocco_Bancomat LatchOut_v8 LatchOut_v10 [6000] Reinserire_Codice
+0011 1
+.names LatchOut_v8 LatchOut_v10 R1 R0 Blocco_Bancomat
+0111 1
+.names Abilitazione_Erogazione Cash_R9 Cash_DE9
+11 1
+.names Abilitazione_Erogazione Cash_R8 Cash_DE8
+11 1
+.names Abilitazione_Erogazione Cash_R7 Cash_DE7
+11 1
+.names Abilitazione_Erogazione Cash_R6 Cash_DE6
+11 1
+.names Abilitazione_Erogazione Cash_R5 Cash_DE5
+11 1
+.names Abilitazione_Erogazione Cash_R4 Cash_DE4
+11 1
+.names Abilitazione_Erogazione Cash_R3 Cash_DE3
+11 1
+.names Abilitazione_Erogazione Cash_R2 Cash_DE2
+11 1
+.names Abilitazione_Erogazione Cash_R1 Cash_DE1
+11 1
+.names Abilitazione_Erogazione Cash_R0 Cash_DE0
+11 1
+.names LatchOut_v7 LatchOut_v8 LatchOut_v9 LatchOut_v10 Check_Fine_Tentativi
 0000 1
-.names LatchOut_v8 Codice2 Codice0 [7248]
-111 1
-.names [7449] [7247] [7248] [7897]
-0-- 1
--00 1
-.names LatchOut_v7 [7484]
-0 1
-.names [7484] LatchOut_v8 [7496]
-0- 1
--0 1
-.names Bancomat_Inserito LatchOut_v10 [7496] [7972]
-0-- 1
--00 1
-.names [7897] LatchOut_v10 [7972] [7793]
-0-- 1
--00 1
-.names [7473] [7468] [7793] LatchOut_v7 [7970]
-11-- 1
---11 1
-.names [7970] [7255]
-1 1
-.names [7485] LatchOut_v10 R1 R0 [7762]
+.names Bancomat_Inserito LatchOut_v7 LatchOut_v8 LatchOut_v10 Reset
 0--- 1
--0-- 1
---0- 1
----0 1
-.names Codice1 Codice3 Codice2 [7431]
-000 1
-.names [7431] [7483] LatchOut_v7 [7891]
-0-- 1
--0- 1
---0 1
-.names [7762] [7891] [7485] LatchOut_v10 [7726]
-0--- 1
--0-- 1
---0- 1
----0 1
-.names [7973] [7718]
-0 1
-.names [7726] [7718] LatchOut_v10 [7889]
-0-- 1
--0- 1
---0 1
-.names [7489] [7889] [7971]
-0- 1
--0 1
-.names [7971] [7254]
-1 1
-.names [7972] [7256]
-1 1
-.names [7973] [7257]
-1 1
-.names R0 [7499]
-0 1
-.names [7489] [7710]
-0 1
-.names [7489] [7499] R0 [7710] [7507]
-00-- 1
---00 1
-.names [7972] [7507] [7508]
-1- 1
--1 1
-.names R1 [7499] [7397]
-00 1
-.names [7508] [7397] [7489] R1 [7187]
-0-0- 1
--00- 1
-0--0 1
--0-0 1
-.names R1 [7498]
-0 1
-.names [7187] [7972] [7498] [7508] [7974]
-00-- 1
---00 1
-.names [7974] [7253]
-1 1
-.names [7508] [7975]
-0 1
-.names [7975] [7729]
-1 1
-.names [7726] Reinserire_Codice
-0 1
-.names Cash_D13 Cash_D15 Cash_D14 [7291]
-000 1
-.names Cash_D10 [7513]
-0 1
-.names Cash_R6 [7514]
-0 1
-.names [7514] Cash_D8 [7813]
-0- 1
--0 1
-.names Cash_D4 Cash_R2 [7521]
+-010 1
+.names Cash_D15 Cash_D14 Cash_D13 Cash_D12 Cash_D11 Cash_D10 Cash_D9 Cash_D8 \
+Cash_D7 Cash_D6 Cash_D5 LatchOut_v10 x11 x10 x9 x8 x7 x6 x5 [5987] [5992] \
+Abilitazione_Erogazione
+1----------0-------1- 1
+-1---------0-------1- 1
+--1--------0-------1- 1
+---1-------0-------1- 1
+----1------01------1- 1
+-----1-----001-----1- 1
+------1----0001----1- 1
+-------1---00001---1- 1
+--------1--000001--1- 1
+---------1-0000001-1- 1
+----------1000000011- 1
+-----------0000000011 1
+.names Codice2 Codice0 Check_Fine_Tentativi Reset LatchOut_v10 LatchOut_v7 \
+[223] [5987] [5994] [6000] [220]
+---001---- 1
+----1-0--0 1
+111-----0- 1
+11-----10- 1
+.names LatchOut_v8 LatchOut_v10 Check_Fine_Tentativi [223]
+--1 1
+11- 1
+.names LatchOut_v10 [223] Reinserire_Codice Check_Fine_Tentativi [221]
+---1 1
+100- 1
+.names Cash_D11 Cash_R9 x11
 01 1
 10 1
-.names [7521] Cash_D4 [7859]
-0- 1
--0 1
-.names Cash_R0 [7522]
-0 1
-.names [7522] Cash_D1 Cash_D0 [7865]
-0-- 1
--00 1
-.names Cash_D1 Cash_R0 [7524]
-1- 1
--0 1
-.names Cash_D2 Cash_D0 [7524] [7867]
-0-- 1
--00 1
-.names Cash_D3 [7526]
-0 1
-.names [7865] [7867] [7526] Cash_R1 [7222]
-0-0- 1
--00- 1
-0--0 1
--0-0 1
-.names Cash_R1 [7525]
-0 1
-.names [7222] [7525] Cash_D3 [7189]
-00- 1
-0-0 1
-.names [7859] [7189] [7521] [7799]
-0-- 1
--00 1
-.names Cash_R3 Cash_D5 [6892]
+.names Cash_D10 Cash_R8 x10
+01 1
+10 1
+.names Cash_D9 Cash_R7 x9
+01 1
+10 1
+.names Check_Fine_Tentativi Reset R1 R0 A0 A1
+--1-1 1
+-010- 1
+1001- 1
+.names Check_Fine_Tentativi Reset R0 A0
+001 1
+100 1
+.names Cash_D8 Cash_R6 x8
+01 1
+10 1
+.names Cash_D7 Cash_R5 x7
+01 1
+10 1
+.names Cash_D6 Cash_R4 x6
+01 1
+10 1
+.names Cash_D5 Cash_R3 x5
+01 1
+10 1
+.names Cash_D4 Cash_R2 x4
+01 1
+10 1
+.names LatchOut_v8 LatchOut_v7 [5987]
 11 1
-00 1
-.names [7799] Cash_D5 [6892] [7527]
-1-1 1
--10 1
-.names Cash_R4 [7528]
-0 1
-.names [7527] [7528] Cash_D6 [7216]
-00- 1
-0-0 1
-.names Cash_D6 [7528] [7217]
-00 1
-.names Cash_D7 [7531]
-0 1
-.names [7216] [7217] Cash_R5 [7531] [7845]
-00-- 1
---00 1
-.names Cash_R5 [7530]
-0 1
-.names [7845] Cash_D7 [7530] [7809]
-0-- 1
--00 1
-.names Cash_D8 [7515]
-0 1
-.names [7813] [7809] [7515] Cash_R6 [7140]
-0-0- 1
--00- 1
-0--0 1
--0-0 1
-.names Cash_R7 [7532]
-0 1
-.names [7140] [7532] Cash_D9 [7210]
-00- 1
-0-0 1
-.names Cash_D9 [7532] [7211]
-00 1
-.names Cash_R8 [7513] [7210] [7211] [7833]
-00-- 1
---00 1
-.names Cash_R8 [7512]
-0 1
-.names [7833] Cash_D10 [7512] [7787]
-0-- 1
--00 1
-.names Cash_R9 [7534]
-0 1
-.names [7534] Cash_D11 [7807]
-0- 1
--0 1
-.names Cash_D11 [7535]
-0 1
-.names [7787] [7807] [7535] Cash_R9 [7191]
-0-0- 1
--00- 1
-0--0 1
--0-0 1
-.names Cash_D12 [7191] [7286]
-00 1
-.names LatchOut_v10 [7291] [7286] [7283]
-00- 1
-0-0 1
-.names [7283] LatchOut_v7 LatchOut_v8 [7539]
-0-- 1
--0- 1
---0 1
-.names [7539] Abilitazione_Erogazione
-0 1
-.names [7762] Blocco_Bancomat
-0 1
-.names [7534] [7539] Cash_DE9
-00 1
-.names [7512] [7539] Cash_DE8
-00 1
-.names [7532] [7539] Cash_DE7
-00 1
-.names [7514] [7539] Cash_DE6
-00 1
-.names [7530] [7539] Cash_DE5
-00 1
-.names [7528] [7539] Cash_DE4
-00 1
-.names Cash_R3 [7516]
-0 1
-.names [7516] [7539] Cash_DE3
-00 1
-.names Cash_R2 [7519]
-0 1
-.names [7519] [7539] Cash_DE2
-00 1
-.names [7525] [7539] Cash_DE1
-00 1
-.names [7522] [7539] Cash_DE0
-00 1
+.names Cash_R1 Cash_R0 Cash_D4 Cash_D3 Cash_D2 Cash_D1 Cash_D0 x4 [5992]
+--1----1 1
+0--1---0 1
+00--1--0 1
+-0-11--0 1
+00---1-0 1
+-0-1-1-0 1
+0---11-0 1
+---111-0 1
+00----10 1
+-0-1--10 1
+0---1-10 1
+---11-10 1
+.names Codice3 Codice1 [5994]
+1- 1
+-1 1
+.names Codice2 Codice0 LatchOut_v7 [5994] [6000]
+1--- 1
+-1-- 1
+--0- 1
+---1 1
 .end
