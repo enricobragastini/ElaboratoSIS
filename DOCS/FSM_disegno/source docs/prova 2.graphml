@@ -557,10 +557,10 @@ BANCOMAT]]></y:Label.Text>
 						</y:Label.Style>
 					</y:Label>
 					<y:Label>
-						<y:Label.Text><![CDATA[1---100/001000
-1--1-00/001000
-1-1--00/001000
-11---00/001000]]></y:Label.Text>
+						<y:Label.Text><![CDATA[1---101/001000
+1--1-01/001000
+1-1--01/001000
+11---01/001000]]></y:Label.Text>
 						<y:Label.LayoutParameter>
 							<y:SmartEdgeLabelModelParameter Model="{y:GraphMLReference 3}" Location="FromTarget" SegmentRatio="-826.5" Distance="301.4990000000016"/>
 						</y:Label.LayoutParameter>
@@ -963,7 +963,7 @@ BANCOMAT]]></y:Label.Text>
 						</y:Label.LayoutParameter>
 					</y:Label>
 					<y:Label Style="{y:GraphMLReference 6}">
-						<y:Label.Text>1-----1/001001</y:Label.Text>
+						<y:Label.Text>1-----1/001000</y:Label.Text>
 						<y:Label.LayoutParameter>
 							<y:SmartEdgeLabelModelParameter Model="{y:GraphMLReference 3}" Location="FromTarget" SegmentIndex="1" SegmentRatio="0.6413009648303767" Distance="140.5"/>
 						</y:Label.LayoutParameter>
