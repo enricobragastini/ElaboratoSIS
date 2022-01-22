@@ -1,4 +1,5 @@
 # Elaborato SIS
+Progetto SIS per il corso di Architettura degli Elaboratori, Informatica 1° anno, UniVr
 
 ### Partecipanti:
 
