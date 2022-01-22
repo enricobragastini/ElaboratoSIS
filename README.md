@@ -2,8 +2,6 @@
 
 ### Partecipanti:
 
-- Bianchini Davide
-
+- [Bianchini Davide](https://github.com/bianchinidavide)
 - Bragastini Enrico
-
-- Mafficini Andrea
+- [Mafficini Andrea](https://github.com/maffo01)
